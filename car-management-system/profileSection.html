@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="mystyle.css"/>
+<!-- <script src="./myfunction.js"></script>  -->
+  <script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+    $("document").ready(function(){
+        $("#second").hide();
+
+                 //textArea
+    $("#Bio").keyup(function(event){
+       $("#count").text($(this).val().length);
+     var x = $(this).val().length; 
+     if(x >= 150){
+        alert("Your Bio is up to 150 characters")
+         $(this).css("border","1px solid green");
+     }
+    //  else{
+    //      $(this).css("border","1px solid blue");
+    //  }
+    });
+
+        //edit button
+    $("#Edit").click(function(){
+        $("#second").show();
+        $("#first").hide();  
+    });
+      //choose button
+      $("#choose").change(function(event){
+        var x = URL.createObjectURL(event.target.files[0]);    
+        $("#image").attr("src",x);
+        $("#sec-img").attr("src",x); 
+        $("#nav-img").attr("src",x); 
+    })
+    //save button
+    $("#save").click(function(event){
+        event.preventDefault();
+        $("#second").hide();
+        $("#first").show();
+        //get value
+        var Name = $("#Name").val(); 
+        var Bio = $("#Bio").val(); 
+        var Company = $("#unique").val(); 
+        var location = $("#Location").val(); 
+        var website = $("#Website").val(); 
+        var twitter = $("#Twitter").val();
+        //var Image =$("#choose[type='file']").val();
+        //set value
+         $(".name").text(Name);
+         $(".bio").text(Bio);
+         $(".company").text(Company);
+         $(".location").text(location);
+         $(".link").text(website);
+         $(".twitter").text(twitter);
+        //  $("#image").attr("src",Image)     
+         });
+            
+    //cancel button
+    $("#cancel").click(function(event){
+        event.preventDefault();   
+        $("#second").hide();
+        $("#first").show(); 
+    });
+
+    });
+</script> 
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container" >
+              <a class="navbar-brand" href="index.html"><b style="color: black;">Shark</b><span>Quarters</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+              </button>
+    
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                  <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                  <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                  <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li>
+                  <li class="nav-item"><a href="blog.html" class="nav-link">Booking History</a></li>
+                  <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+           </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+
+        <div id="first" class="form-edit1">
+         <img src="./images/wallpaperflare.com_wallpaper (3).jpg" id="image" >
+         <br/>
+         <br>  
+        <b style="color: cornflowerblue;" >Name</b>
+        <br>
+        <div class="name"  ></div>
+        <br>
+        <b style="color: cornflowerblue;">Bio</b>
+        <br>
+        <div class="bio"  ></div>
+        <br> 
+       <div class="container"> 
+        <img id="one" src="./images/company.png"/><br>
+        <div class="company"></div>
+        <img id="one" src="./images/marker.png"/>
+        <div class="location"></div>
+        <img id="one" src="./images/domain.png"/>       
+        <div class="link"></div>
+        <img id="one" src="./images/twitter.png"/>
+        <div class="twitter"></div></div>
+        <button id="Edit">Edit profile</button>
+        </div>
+
+        <div id="second">
+            <form>
+            <div class="form-edit">
+                <img id="sec-img" src="./images/wallpaperflare.com_wallpaper (3).jpg" />
+                <input id="choose" type="file" name="image" style="border-radius: 9px;" /><br/>
+                <b>Name</b><br/>
+             <input id="Name" type="text" name="text" />
+             <br/>
+             <b>Bio</b><br/>
+             <textarea id="Bio" placeholder="write about yourself" maxlength="150"></textarea>
+             <br>
+             <span id="count"> 0 </span>/150
+             <br>
+             <img id="com" src="./images/company.png" />
+             <input id="unique" type="text" name="text"class="same" placeholder="company" />
+             <br>
+             <img id="com" src="./images/marker.png"/>
+             <input id="Location" type="text" name="text" class="same" placeholder="Location"/>
+             <br>
+             <img id="com" src="./images/domain.png"/>
+             <input id="Website" type="text" name="text" class="same" placeholder="Website" />
+             <br>
+             <img id="com" src="./images/twitter.png"/>
+             <input id="Twitter" type="text" name="text"class="same" placeholder="Twitter username" />
+             <br>
+             <button id="save"><b>Save</b></button>
+             <button id="cancel"><b>Cancel</b></button> </div>
+           </form>    
+         </div> 
+         
+         <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

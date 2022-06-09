@@ -1,0 +1,146 @@
+
+/* form-edit1 */
+.form-edit1{
+ margin-top: 99px;   
+text-align: center;
+color: white;
+box-sizing: border-box;
+border: 1px solid black;
+border-radius: 50px;
+box-shadow:  black 0px 0px 50px;
+width: 40%;
+height: 650px;
+margin-left: 470px;
+}
+#one{
+    background-color:rgb(120, 239, 120);
+    height:30px;
+    width:25px;
+}
+.bio{
+    margin-left: 125px;
+    background-color: black;
+    overflow:scroll;
+    height:90px;
+    width:350px; 
+
+}
+.container{
+    gap: 10px;
+    display: flex;
+}
+#Edit{
+    color: white;
+    background-color: cornflowerblue;
+    margin-top: 70px;
+}
+
+
+
+
+
+/* //all images */
+img{
+    margin-top: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius:100px ;
+    
+}
+body{
+    background-image: url("./images/car-3.jpg");
+background-repeat: no-repeat;
+ background-size:100%;
+}
+body:hover{
+    background-repeat: no-repeat;
+    background-image: url(./images/wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background-size: 100%;}  
+
+
+/* booking body */
+
+/* down icon */
+.Down{
+    position: fixed;
+    top:30px;
+    right: 5px;
+    color: blue;
+}
+
+
+
+    /* Second form */
+ 
+form{
+    /* background-color: forestgreen; */
+    margin-left: 34%;
+    width:500px;
+    height:550px;  
+    margin-top: 99px;
+    text-align: center ;}
+textarea{
+    border: 4px solid green;
+        color: green;
+        height: 95px;
+        width: 70%;
+        border-radius: 5px;}    
+input{
+    /* border: 4px solid cornflowerblue; */
+    color: green;
+    margin-bottom: 10px;  
+        height:25px;  
+        width: 50% ;
+        border-radius: 5px;}
+input#unique{
+            margin-top: 10px; }
+.same{width: 50%}
+#com{
+    background-color:green;
+    height: 30px;
+    width: 25px;
+   border-radius: 15px;
+}
+    
+#save{
+    color: white;
+    width: 15%;
+    background-color:green}
+#cancel{
+    background-color: rgb(66, 99, 28);
+    width:20%;
+    
+}                
+
+/* // all buttons */
+button{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;   
+    /* width: 80px; */
+}
+#sec-img{
+   margin-left: 50px; 
+   margin-top: 10px; 
+   /* float:left; */
+   height: 180px;
+   width: 180px;
+   border-radius:150px ;
+   border: 4px solid white;
+   
+};
+.form-edit:hover::before#sec-img:hover{
+    border: 4px solid yellow;
+}
+.form-edit{
+    color: cornflowerblue;
+    margin-bottom:40px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border : 1px solid black;    
+   height : 125%;
+   box-shadow:  black 0px 0px 50px;    
+}
+
+
+
